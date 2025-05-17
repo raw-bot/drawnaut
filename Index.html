@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawnaut Magazine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: white;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 104px;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(0,0,0,0.3);
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+    }
+    nav a {
+      margin-left: 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .hero {
+      width: 100%;
+      height: 900px;
+      position: relative;
+      margin-top: 104px;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .headline {
+      position: relative;
+      height: 320px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .headline video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .headline-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 0;
+    }
+    .card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      aspect-ratio: 1 / 1;
+    }
+    .card-text {
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+      color: white;
+      padding: 15px;
+      font-size: 1rem;
+      font-weight: 600;
+      width: 100%;
+    }
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .slider video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slider video.active {
+      opacity: 1;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">drawnaut</div>
+    <nav>
+      <a href="#">Fashion</a>
+      <a href="#">Art & Culture</a>
+      <a href="#">Music</a>
+      <a href="#">Photography</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="slider">
+      <video class="active" src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop></video>
+      <video src="https://www.w3schools.com/html/movie.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+  <section class="headline">
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop></video>
+    <div class="headline-text">The dusky side of Arts and Fashion.</div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <img src="https://picsum.photos/id/1015/800/1000" alt="Mirage">
+      <div class="card-text">Mirage<br><small>Fashion | Exclusive</small></div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/1008/1000/800" alt="Drift">
+      <div class="card-text">What Is The New Shining? / Drift Studio<br><small>Art & Culture | Interview</small></div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/1025/1920/1080" alt="Rave">
+      <div class="card-text">Unwind After The Rave | Amsterdam<br><small>Places</small></div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/1049/700/1100" alt="Tokyo">
+      <div class="card-text">Tokyo Terror / A Talk With Lith Li<br><small>Music | Interview</small></div>
+    </div>
+  </section>
+
+  <script>
+    const videos = document.querySelectorAll('.slider video');
+    let index = 0;
+    setInterval(() => {
+      videos[index].classList.remove('active');
+      index = (index + 1) % videos.length;
+      videos[index].classList.add('active');
+    }, 6000);
+  </script>
+</body>
+</html>
