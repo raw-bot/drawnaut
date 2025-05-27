@@ -256,6 +256,15 @@ nav a {
 
 /* Media queries pour les petites tailles d'écran */
 @media (max-width: 750px) {
+  body {
+    max-width: 100vw;
+    /* Désactiver la sélection de texte sur mobile */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
   .hero {
     height: 100vw; /* Hauteur égale à la largeur pour maintenir le ratio carré */
     max-height: 100vh; /* Ne pas dépasser la hauteur de l'écran */
@@ -285,6 +294,36 @@ nav a {
   nav a {
     font-size: 0.9rem;
     margin-left: 15px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+  
+  /* Désactiver les interactions indésirables sur mobile */
+  .card img,
+  .card video,
+  .hero video,
+  .headline video {
+    pointer-events: auto; /* Garder les events pour les boutons son */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none; /* Désactiver le menu contextuel iOS */
+    -webkit-tap-highlight-color: transparent; /* Supprimer le highlight au tap */
+  }
+  
+  .sound-button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .grid-sound-button {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
   }
 }
 
