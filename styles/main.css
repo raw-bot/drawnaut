@@ -219,27 +219,39 @@ nav a {
 }
 
 .about-content {
-  padding: 120px 40px 40px 40px;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .about-content h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 2rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: white;
+  text-align: center;
 }
 
 .about-content p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
   color: white;
+  text-align: center;
 }
 
 /* Media queries pour les petites tailles d'écran */
@@ -281,5 +293,22 @@ nav a {
   .headline-text {
     font-size: 0.8rem;
     letter-spacing: -0.5px;
+  }
+  
+  .about-content {
+    width: 90vw;
+    height: 90vw;
+    max-height: 80vh;
+    padding: 30px;
+  }
+  
+  .about-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
   }
 } 
