@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawnaut</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">work</a>
+      <a href="pages/about.html">about</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="slider">
+      <video class="active" id="hero-video-1" src="assets/videos/DrawnFront.mp4" autoplay muted></video>
+      <!-- <div class="overlay-image">
+        <img src="assets/images/TitreDrawTranspa.png" alt="Drawnaut">
+      </div> -->
+      <button class="sound-button" id="toggle-sound"><i class="fas fa-volume-mute"></i></button>
+    </div>
+  </section>
+
+  <section class="headline">
+    <video src="assets/videos/LundRaph.mp4" autoplay muted loop></video>
+    <div class="headline-text">| exploring the raw language of light and sound</div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <video id="grid-video-1" src="assets/videos/LundROL.mp4" autoplay muted loop></video>
+      <button class="sound-button grid-sound-button" data-video="grid-video-1"><i class="fas fa-volume-mute"></i></button>
+      <div class="card-text">LundROL<br><small>Light | Installation</small></div>
+    </div>
+    <div class="card">
+      <img src="assets/images/LundHand.png" alt="LundHand">
+      <div class="card-text">LundHand<br><small>Art | Creation</small></div>
+    </div>
+    <div class="card">
+      <img src="assets/images/LundMin.jpg" alt="LundMin">
+      <div class="card-text">LundMin<br><small>Art | Minimal</small></div>
+    </div>
+    <div class="card">
+      <video id="grid-video-2" src="assets/videos/H1.mp4" autoplay muted loop></video>
+      <button class="sound-button grid-sound-button" data-video="grid-video-2"><i class="fas fa-volume-mute"></i></button>
+      <div class="card-text">H1<br><small>Video | Installation</small></div>
+    </div>
+    <div class="card">
+      <video id="grid-video-3" src="assets/videos/S1.mp4" autoplay muted loop></video>
+      <button class="sound-button grid-sound-button" data-video="grid-video-3"><i class="fas fa-volume-mute"></i></button>
+      <div class="card-text">S1<br><small>Art | Series</small></div>
+    </div>
+    <div class="card">
+      <img src="assets/images/Jelly.png" alt="Jelly">
+      <div class="card-text">Jelly<br><small>Art | Exclusive</small></div>
+    </div>
+    <div class="card">
+      <video id="grid-video-4" src="assets/videos/TooManyStates.mp4" autoplay muted loop></video>
+      <button class="sound-button grid-sound-button" data-video="grid-video-4"><i class="fas fa-volume-mute"></i></button>
+      <div class="card-text">TooManyStates<br><small>Art | Concept</small></div>
+    </div>
+    <div class="card">
+      <img src="assets/images/JellyRoof.png" alt="JellyRoof">
+      <div class="card-text">JellyRoof<br><small>Art | Installation</small></div>
+    </div>
+  </section>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html> 

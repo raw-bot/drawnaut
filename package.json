@@ -1,0 +1,16 @@
+{
+  "name": "drawnaut",
+  "version": "1.0.0",
+  "description": "Drawnaut Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve \"E:\\0 Code\\Drawnaut\\src\""
+  },
+  "keywords": [
+    "fashion",
+    "art",
+    "culture"
+  ],
+  "author": "",
+  "license": "ISC"
+} 
