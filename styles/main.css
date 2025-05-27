@@ -87,6 +87,9 @@ nav a {
     color: white;
     text-align: center;
     white-space: nowrap;
+    width: max-content;
+    max-width: 90vw;
+    overflow: hidden;
   }
 .grid {
   display: grid;
@@ -258,6 +261,7 @@ nav a {
   
   .headline-text {
     font-size: 0.9rem; /* Même taille que le menu sur mobile */
+    max-width: 95vw;
   }
   
   header {
@@ -269,5 +273,13 @@ nav a {
   nav a {
     font-size: 0.9rem;
     margin-left: 15px;
+  }
+}
+
+/* Fix pour les navigateurs avec rendu de police différent */
+@media (max-width: 600px) {
+  .headline-text {
+    font-size: 0.8rem;
+    letter-spacing: -0.5px;
   }
 } 
