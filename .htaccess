@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# Redirections pour les fautes de frappe de drawnaut
+RewriteCond %{HTTP_HOST} ^(www\.)?drawnaute\.com$ [NC]
+RewriteRule ^(.*)$ https://drawnaut.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?draunaute\.com$ [NC]
+RewriteRule ^(.*)$ https://drawnaut.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?dronaute\.com$ [NC]
+RewriteRule ^(.*)$ https://drawnaut.com/$1 [R=301,L]
+
+# Autres variantes possibles
+RewriteCond %{HTTP_HOST} ^(www\.)?drawnot\.com$ [NC]
+RewriteRule ^(.*)$ https://drawnaut.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?drawnout\.com$ [NC]
+RewriteRule ^(.*)$ https://drawnaut.com/$1 [R=301,L]
+
+# Redirection www vers non-www pour le domaine principal
+RewriteCond %{HTTP_HOST} ^www\.drawnaut\.com$ [NC]
+RewriteRule ^(.*)$ https://drawnaut.com/$1 [R=301,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
